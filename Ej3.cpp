@@ -34,17 +34,23 @@ void eliminarOcurrencias(Pila<int>& pila, int valor) {
 
     // Restaurar la pila original, omitiendo las ocurrencias adicionales si se encontró más de una
     while (!pilaAux.esVacia()) {
-        pila.push(pilaAux.pop());
+        int aux;
+        aux = pilaAux.pop();
+        if(encontrado && contador ==1 && aux == valor ){
+
+        }else{
+            pila.push(aux);
+        }
     }
 
     // Verifica si el valor fue encontrado y actúa en consecuencia
-    if (contador == 0) {
-        cout << "El valor " << valor << " no pertenece a la pila." << endl;
-    } else if (contador > 1) {
-        cout << "Eliminadas " << contador - 1 << " ocurrencias adicionales del valor " << valor << "." << endl;
-    } else {
-        cout << "Se mantuvo la única ocurrencia del valor " << valor << " en la pila." << endl;
-    }
+//    if (contador == 0) {
+//        cout << "El valor " << valor << " no pertenece a la pila." << endl;
+//    } else if (contador > 1) {
+//        cout << "Eliminadas " << contador - 1 << " ocurrencias adicionales del valor " << valor << "." << endl;
+//    } else {
+//        cout << "Se mantuvo la única ocurrencia del valor " << valor << " en la pila." << endl;
+//    }
 }
 
 void mostrarPila(Pila<int>& pila) {
@@ -83,7 +89,7 @@ int main() {
     mostrarPila(pila);
 
     // Eliminar ocurrencias del valor 2
-    eliminarOcurrencias(pila, 3);
+    eliminarOcurrencias(pila, 5);
 
     // Mostrar la pila después de la modificación
     cout << "Pila despues de la modificacion: ";

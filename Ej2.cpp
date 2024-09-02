@@ -70,10 +70,11 @@ int main() {
 
     // Mostrar la pila después del reemplazo
     cout << "Pila despues del reemplazo: ";
-    while (!pila.esVacia()) {
-        cout << pila.pop() << " ";
-    }
-    cout << endl;
+    mostrarPila(pila);
+//    while (!pila.esVacia()) {
+//        cout << pila.pop() << " ";
+//    }
+//    cout << endl;
 
     return 0;
 }
