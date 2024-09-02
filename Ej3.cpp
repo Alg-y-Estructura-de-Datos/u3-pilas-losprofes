@@ -89,7 +89,7 @@ int main() {
     mostrarPila(pila);
 
     // Eliminar ocurrencias del valor 2
-    eliminarOcurrencias(pila, 5);
+    eliminarOcurrencias(pila, 3);
 
     // Mostrar la pila después de la modificación
     cout << "Pila despues de la modificacion: ";
